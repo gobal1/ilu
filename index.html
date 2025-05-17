@@ -5,22 +5,92 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>my toko sale now</title>
     <style>
-        body { font-family: arial,sans-serif; margin: 0; padding: 0;background: #f5f5f5; }
-        header { background: #0074a186; color: white; padding: 20px; text-align: center; }
-            .container { padding: 20px ;}
-            .produk {display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-            .item { background: rgb(245, 247, 246); padding: 15px;boreder-radius: 5px; width: 250px : box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-            .item img { width: 100%; height: auto; border-radius: 5px; }
-            .item h3  { margin: 10px 0 5px; }
-            .item p { margin: 5px 0; }
-            .btn-beli { bakground: #27ae60; color: white; padding: 10px; border: none; cursor: pointer; border-radius: 5px; }
-            footer { text-align: center; padding: 20px; background: #00d9ffd8; color: white; margin-top: 40px; }
+        body {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: #0074a186;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .animated-text {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 1.2em;
+            animation: moveText 10s linear infinite;
+            margin-top: 10px;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .produk {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .item {
+            background: rgb(245, 247, 246);
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .item h3 {
+            margin: 10px 0 5px;
+        }
+
+        .item p {
+            margin: 5px 0;
+        }
+
+        .btn-beli {
+            background: #27ae60;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #00d9ffd8;
+            color: white;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>My motion </h1>
-        <p>Made in after effects and blender, etc</p>
+        <div class="animated-text">Made in After Effects and Blender, etc</div>
     </header>
     <div class="container">
         <div class="produk">
