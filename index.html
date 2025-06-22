@@ -99,6 +99,53 @@
       color: white;
       margin-top: 40px;
     }
+
+    /* Burger menu */
+    #burger {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    #burger div {
+      width: 100%;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+    }
+
+    #menu-items {
+      position: fixed;
+      top: 60px;
+      left: 20px;
+      background: rgba(32, 58, 67, 0.95);
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+      flex-direction: column;
+    }
+
+    #menu-items button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 8px 0;
+      text-align: left;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    #menu-items button:hover {
+      text-decoration: underline;
+    }
+    
   </style>
 </head>
 <body>
