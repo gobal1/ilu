@@ -102,23 +102,21 @@
   </style>
 </head>
 <body>
-<nav id="menu" style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
-  <button onclick="goToSection('portfolio')" style="padding: 10px 15px; margin-right: 5px; background: #203a43; color: white; border: none; border-radius: 5px; cursor: pointer;">Portfolio</button>
-  <button onclick="goToSection('top')" style="padding: 10px 15px; background: #203a43; color: white; border: none; border-radius: 5px; cursor: pointer;">Home</button>
-</nav>
+  <!-- 1️⃣ Checkbox tersembunyi untuk kontrol (trigger) -->
+<input type="checkbox" id="menu-toggle" />
 
-<script>
-  function goToSection(id) {
-    if (id === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }
-</script>
+<!-- 2️⃣ Label yang tampil sebagai tombol garis tiga -->
+<label for="menu-toggle" id="menu-icon">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+<!-- 3️⃣ Menu item (link-link yang muncul saat checkbox dicentang) -->
+<div id="menu-items">
+  <a href="https://example.com/home">Home</a>
+  <a href="https://example.com/portfolio">Portfolio</a>
+</div>
 
   <header>
     <div class="video-background">
