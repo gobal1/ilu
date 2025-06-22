@@ -24,7 +24,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: yellow;rgb(211, 214, 0);
+      color: yellow;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -99,15 +99,94 @@
       color: white;
       margin-top: 40px;
     }
+
+    /* Burger + Sidebar */
+    #menu-toggle {
+      display: none;
+    }
+
+    #menu-icon {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    #menu-icon span {
+      display: block;
+      height: 4px;
+      background: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    #menu-toggle:checked + #menu-icon span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    #menu-toggle:checked + #menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+    #menu-toggle:checked + #menu-icon span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: rgba(32, 58, 67, 0.95);
+      padding: 20px;
+      box-sizing: border-box;
+      transition: left 0.3s;
+      z-index: 1000;
+    }
+
+    #sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    #sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    #menu-toggle:checked ~ #sidebar {
+      left: 0;
+    }
   </style>
 </head>
+<body>
+
+  <!-- Burger menu + sidebar -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" id="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div id="sidebar">
+    <a href="https://example.com/home">Home</a>
+    <a href="https://example.com/portfolio">Portfolio</a>
+    <a href="https://example.com/about">About</a>
+  </div>
 
   <header>
     <div class="video-background">
       <video autoplay muted loop playsinline>
-    <source src="Web Backg.webm" type="video/webm" style="width: 1349px; height: 598px;" />
+        <source src="Web Backg.webm" type="video/webm" style="width: 1349px; height: 598px;" />
       </video>
-        <div class="overlay"></div>
+      <div class="overlay"></div>
     <div class="moving-title">Welcome to EL Ghifare Motion</div>
     <a href="#portfolio" class="scroll-down">See my work↓</a>
   </header>
@@ -133,8 +212,8 @@
       <h3>Motion Background</h3>
       <p>for stock video or walpaper</p>
     </div>
-    <div class="porfolio-item">
-        <img src="0415[1].png" style="width: 546px; height: auto;">
+    <div class="portfolio-item">
+      <img src="0415[1].png" style="width: 546px; height: auto;" alt="Karya 5">
       <h3>3D Animation</h3>
       <p>Studio modeling and keyframe, made in Blender render at Cycles.</p>
     </div>
