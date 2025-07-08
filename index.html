@@ -244,6 +244,24 @@
       box-shadow: #fbff00;
       z-index: 1007;
     }
+
+    .poup {
+      background: red;
+      height: 400px;
+      width: 148px;
+      margin: 89, 67;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
   </style>
 </head>
 <body>
@@ -253,7 +271,7 @@
   <div id="somba">
     <a href="#">soon</a>
     <a href="">soon</a>
-    <a href="">Login</a>
+    <a button onclick="poup">Login</a></button>
   </div>
 
   <!-- Burger menu + sidebar -->
@@ -313,6 +331,28 @@
   <footer>
     <p>&copy; 2025 Portfolio El Ghifari. All rights reserved.</p>
   </footer>
+
+  <button onclick="showPopup()">Tampilkan Pop-up</button>
+
+  <!-- Overlay dan kotak pop-up -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popupBox">
+    <h2>Ini Pop-up!</h2>
+    <p>Halo, ini adalah isi dari pop-up kamu.</p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+
+  <script>
+    function showPopup() {
+      document.getElementById("poup").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePopup() {
+      document.getElementById("poup").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
