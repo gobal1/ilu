@@ -10,7 +10,7 @@
       scroll-behavior: smooth;
     }
 
-    body {
+    #body {
       margin: 0;
       opacity: 1;
       font-family: 'Gotham', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -136,14 +136,14 @@
       transition: 0.3s;
     }
 
-     body + #menu-toggle:checked + #menu-icon span:nth-child(1) {
+     #menu-toggle:checked + #body + #menu-icon span:nth-child(1) {
       transform: translate(250px, 0px), opacity(0.3);
     }
-    #menu-toggle:checked + #menu-icon span + body:nth-child(2) {
-      transform: translate(250px, 0px), opacity(0.3);
+    #menu-toggle:checked + #menu-icon span:nth-child(2) {
+      transform: translate(250px, 0px);
     }
     #menu-toggle:checked + #menu-icon span:nth-child(3) {
-      transform: translate(250px, 0px), opacity(0.3);
+      transform: translate(250px, 0px);
     }
 
     #sidebar {
@@ -207,7 +207,7 @@
       height: 58px;
       display: block;
       box-shadow: #fbff00;
-      z-index: 1000;
+      z-index: 999;
     }
 
     #domba {
