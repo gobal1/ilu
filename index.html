@@ -136,17 +136,14 @@
       transition: 0.3s;
     }
 
-    #menu-toggle:checked + #menu-icon span:nth-child(1) {
-      transform: translate(250px, 0px);
+    #menu-toggle:checked + #menu-icon span + body:nth-child(1) {
+      transform: translate(250px, 0px), opacity(0.3);
     }
-    #menu-toggle:checked + #menu-icon span:nth-child(2) {
-      transform: translate(250px, 0px);
+    #menu-toggle:checked + #menu-icon span + body:nth-child(2) {
+      transform: translate(250px, 0px), opacity(0.3);
     }
     #menu-toggle:checked + #menu-icon span:nth-child(3) {
-      transform: translate(250px, 0px);
-    }
-    #menu-toggle:checked + body () {
-      transform: opacity(0.3);
+      transform: translate(250px, 0px), opacity(0.3);
     }
 
     #sidebar {
