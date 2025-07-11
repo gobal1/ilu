@@ -18,17 +18,6 @@
       transition: .5s ease;
       color: #333;
     }
-
-    #dark-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 999;
-      display: none;
-    }
     
     header {
       width: 100%;
@@ -164,7 +153,7 @@
       width: 250px;
       height: 124%;
       border-radius: 0px 0px 178px 0px;
-      background: #0f2027;
+      background: #2c5364;
       padding: 20px;
       box-sizing: border-box;
       transition: left 0.3s;
@@ -264,6 +253,21 @@
       width: 148px;
       margin: 89px, 67px;
       z-index: 2003;
+    }
+
+    #dark-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      display: none;
+    }
+
+    #menu-toggle:checked ~ #dark-overlay {
+      display: block;
     }
 
   </style>
