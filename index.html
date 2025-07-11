@@ -255,25 +255,17 @@
       z-index: 2003;
     }
 
-    #dark-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 999;
-      display: none;
+    body:hover {
+      opacity: 0.3;
     }
 
-    #menu-toggle:checked ~ #dark-overlay {
+    #menu-toggle:checked ~ body:hover {
       display: block;
     }
 
   </style>
 </head>
 <body>
-  <div id="dark-overlay"></div>
   <div id="glass"></div>
   <div id="domba"></div>
   <div id="tutup"></div>
