@@ -299,16 +299,40 @@
       text-decoration: underline;
     }
 
+    #sorkem {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: red;
+      width: 400px;
+      height: 300px;
+      border-radius: 20px;
+      display: none;
+      z-index: 2000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
   </style>
 </head>
 <body>
+  <div id="sorkem">
+    <span class="close-btn" onclick="hidePopup()">&times;</span>
+    <h2 style="color:white; text-align:center;">provide value</h2>
   <div id="glass"></div>
   <div id="domba"></div>
   <div id="tutup"></div>
   <div id="somba">
     <a href="#">soon</a>
     <a href="">soon</a>
-    <a button onclick="poup">Login</a></button>
+    <a href="#" onclick="showPopup()">nilai</a>
   </div>
 
   <div id="dark-overlay"></div>
@@ -380,6 +404,19 @@
   <footer>
     <p>&copy; 2025 Portfolio El Ghifari. All rights reserved.</p>
   </footer>
+
+    <script>
+    function showPopup() {
+      document.getElementById("dark-overlay").style.display = "block";
+      document.getElementById("sorkem").style.display = "block";
+      document.body.classList.add("modal-open");
+    }
+    function hidePopup() {
+      document.getElementById("dark-overlay").style.display = "none";
+      document.getElementById("sorkem").style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  </script>
 
 </body>
 </html>
