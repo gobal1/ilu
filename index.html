@@ -319,11 +319,20 @@
     position: fixed;
     width: 100%;
 }
+    .bintang {
+      font-size: 30px;
+      color: gray;
+      cursor: pointer;
+    }
+
+    .bintang.aktif {
+      color: gold;
+    }
 
   </style>
 </head>
 <body>
-  <div id="sorkem">
+  <div class="bintang" id="sorkem">
     <span class="close-btn" onclick="hidePopup()">&times;</span>
     <h2 style="color:black; text-align:center;">provide value</h2>
   </div>
