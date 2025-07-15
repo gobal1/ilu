@@ -319,15 +319,6 @@
     position: fixed;
     width: 100%;
 }
-    .bintang {
-      font-size: 30px;
-      color: gray;
-      cursor: pointer;
-    }
-
-    .bintang.aktif {
-      color: gold;
-    }
 
     @keyframes showPopup {
       from { opacity: 0; transform: translateY(10px); }
@@ -336,7 +327,7 @@
   </style>
 </head>
 <body>
-  <div class="bintang" id="sorkem">
+  <div id="sorkem">
     <span class="close-btn" float: right; onclick="hidePopup()">&times;</span>
     <h2 style="color:black; text-align:center;">provide value</h2>
   </div>
