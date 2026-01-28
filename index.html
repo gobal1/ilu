@@ -326,6 +326,28 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    form.tutup input[type=text] {
+  width: 75%;
+  height: 90%;
+  color: #0f2027;
+}
+
+form.tutup button {
+  float: right;
+  width: 23%;
+  padding: 18px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+#tutup button:hover {
+  background: orange;
+}
+
   </style>
 </head>
 <body>
@@ -335,7 +357,10 @@
   </div>
   <div id="glass"></div>
   <div id="domba"></div>
-  <div id="tutup"></div>
+   <form id="tutup" class="tutup" action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search2">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
   <div id="somba">
     <a href="#">soon</a>
     <a href="">soon</a>
@@ -428,4 +453,5 @@
 
 </body>
 </html>
+
 
